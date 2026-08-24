@@ -256,3 +256,45 @@
 //     cout<<count(arr,target,0,10,0);
 // return 0;
 // }
+
+//code for check array is sorted or not
+// #include<iostream>
+// using namespace std;
+// bool check(int arr[],int n){
+//     if(n==1){
+//         return true;
+//     }
+//     return arr[n-1]>=arr[n-2]&&check(arr,n-1);
+// }
+// int main(){
+//     int arr[]={1,2,3,7,5,6};
+//     int n=6;
+//     cout<<check(arr,n);
+// }
+
+//code for binary search in recursion
+//#include<iostream>
+//using namespace std;
+// bool binarysearch(int arr[],int target ,int st,int end){
+//     if(st<=end){
+//         int mid=(st+end)/2;
+//         if(arr[mid]>target){
+//             return binarysearch(arr,target,st,mid-1);
+//         }
+//         else if(arr[mid]<target){
+//             return binarysearch(arr,target,mid+1,end);
+//         }
+//         else {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int target=2;
+//     cout<<binarysearch(arr,target,0,4);
+// return 0;
+// }
+
+
