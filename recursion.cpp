@@ -310,3 +310,20 @@ printsubset(arr,i+1,ans[]);
 ans.pop_back();
 printsubset(arr,i+1,ans[]);}
 */
+
+//functon for subsets 2 question
+// vector<vector<int>> ps(vector<int> nums, vector<int> ans,vector<vector<int>> vec,int i){
+//     if(i==3){
+//         vec.push_back({ans});
+//         return;
+//     }
+//     ans.push_back(arr[i]);
+//     ps(vec,ans,i,nums);
+
+//     ans.pop_back();
+    
+//     int idx=i+1;
+//     while(i<nums.size()&& nums[idx]==nums[idx-1]) idx++;
+//     ps(nums,ans,vec,idx);
+
+// }
