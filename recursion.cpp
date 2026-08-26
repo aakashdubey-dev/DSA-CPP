@@ -297,4 +297,16 @@
 // return 0;
 // }
 
-
+//function for print all subsets
+/*void printsubset(int arr[], int i, int &ans[]){
+if(i==arrr.size()){
+for(int val: ans){
+cout<<val<<" ";
+}cout<<endl;
+return ;
+}
+ans.push_back(arr[i]);
+printsubset(arr,i+1,ans[]);
+ans.pop_back();
+printsubset(arr,i+1,ans[]);}
+*/
