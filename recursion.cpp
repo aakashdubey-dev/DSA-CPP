@@ -361,3 +361,53 @@ printsubset(arr,i+1,ans[]);}
 //             }
 //         }
 //     }  
+
+//function for sudoku solver problem
+// bool issafe(vector<vector<char>>& board,int row ,int col,char dig){
+//     for(int i=0;i<9;i++){
+//         if(board[row][i]== dig){
+//             return false;
+//         }
+//     }
+//     for(int i=0;i<9;i++){
+//         if(board[i][col]== dig){
+//             return false;
+//         }
+//     }
+//     int sr=(row/3)*3;
+//     int sc=(col/3)*3;
+//     for(int i=sr;i<=sr+2;i++){
+//         for(int j=sc;j<=sc+2;j++){
+//         if(board[i][j]==dig){
+//             return false;
+//         }
+//         }
+//     }
+// return true;
+// }
+// bool sudokusolver(vector<vector<char>>& board,int row ,int col){
+//     if(row==9){
+//         return true;
+//     }
+//     int nxtrow=row;int nxtcol=col+1;
+//     if(nxtcol==9){
+//         nxtrow=row+1;
+//         nxtcol=0;
+//     }
+//     if(board[row][col]!='.'){
+//         return sudokusolver(board,nxtrow ,nxtcol);
+//     }
+//      for(char dig='1';dig<='9';dig++){
+//         if(issafe(board,row,col,dig)){
+//             board[row][col]=dig;
+//             if(sudokusolver(board,nxtrow ,nxtcol)){
+//                 return true;
+//             }
+//              board[row][col]='.';
+//         }
+//      }
+//      return false;
+// }
+//     void solveSudoku(vector<vector<char>>& board) {
+//         sudokusolver(board,0,0);
+//     }
