@@ -411,3 +411,41 @@ printsubset(arr,i+1,ans[]);}
 //     void solveSudoku(vector<vector<char>>& board) {
 //         sudokusolver(board,0,0);
 //     }
+
+//code for rat in maze problem
+#include<iostream>
+#include<vector>
+using namespace std;
+void helper(vector<vector<int>> &mat,int row,int col,string path,vector<string> ans, vector<vector<bool>> &vis){
+    int n=mat.size();
+    if(row<0|| row>=n||col<0||col>=n||mat[row][col]==0||mat[row][col]==-1){
+        return;
+    }
+    if(row==n-1&&col==n-1){
+        return ans.push_back(path);
+    }
+    mat[row][col]=-1;
+    helper(mat,row+1,col,path+"d",ans,vis);
+    helper(mat,row-1,col,path+"u",ans,vis);
+    helper(mat,row,col+1,path+"r",ans,vis);
+    helper(mat,row,col-1,path+"l",ans,vis);
+
+    mat[row][col]=1; //we use visit matrix but to reduce space complexity we are changing in current matrix
+}
+vector<string> findpath(vector<vector<int>>& mat){
+    int n=mat.size();
+    vector<string> ans;
+    string path="";
+    vector<vector<bool>> vis(n,vector<bool>(n,false));
+    helper(mat,0,0,path,ans,vis);
+    return ans;
+}
+
+int main(){
+    vector<vector<int>> mat={{1,0,0,0},{1,0,1,1},{1,1,0,0},{0,1,1,1}};
+    vector<string> anss=findpath(mat);
+    for(string val: anss){
+        cout<<val<<endl;
+    }
+return 0;
+}
