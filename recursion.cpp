@@ -413,39 +413,82 @@ printsubset(arr,i+1,ans[]);}
 //     }
 
 //code for rat in maze problem
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// void helper(vector<vector<int>> &mat,int row,int col,string path,vector<string> &ans, vector<vector<bool>> &vis){
+//     int n=mat.size();
+//     if(row<0|| row>=n||col<0||col>=n||mat[row][col]==0||mat[row][col]==-1){
+//         return;
+//     }
+//     if(row==n-1&&col==n-1){
+//         return ans.push_back(path);
+//     }
+//     mat[row][col]=-1;
+//     helper(mat,row+1,col,path+"d",ans,vis);
+//     helper(mat,row-1,col,path+"u",ans,vis);
+//     helper(mat,row,col+1,path+"r",ans,vis);
+//     helper(mat,row,col-1,path+"l",ans,vis);
+
+//     mat[row][col]=1; //we use visit matrix but to reduce space complexity we are changing in current matrix
+// }
+// vector<string> findpath(vector<vector<int>>& mat){
+//     int n=mat.size();
+//     vector<string> ans;
+//     string path="";
+//     vector<vector<bool>> vis(n,vector<bool>(n,false));
+//     helper(mat,0,0,path,ans,vis);
+//     return ans;
+// }
+
+// int main(){
+//     vector<vector<int>> mat={{1,0,0,0},{1,1,1,1},{1,1,0,0},{0,1,1,1}};
+//     vector<string> anss=findpath(mat);
+//     for(string val: anss){
+//         cout<<val<<endl;
+//     }
+// return 0;
+// }
+
+//function for combination sum
 #include<iostream>
 #include<vector>
+#include<set>
 using namespace std;
-void helper(vector<vector<int>> &mat,int row,int col,string path,vector<string> ans, vector<vector<bool>> &vis){
-    int n=mat.size();
-    if(row<0|| row>=n||col<0||col>=n||mat[row][col]==0||mat[row][col]==-1){
-        return;
-    }
-    if(row==n-1&&col==n-1){
-        return ans.push_back(path);
-    }
-    mat[row][col]=-1;
-    helper(mat,row+1,col,path+"d",ans,vis);
-    helper(mat,row-1,col,path+"u",ans,vis);
-    helper(mat,row,col+1,path+"r",ans,vis);
-    helper(mat,row,col-1,path+"l",ans,vis);
 
-    mat[row][col]=1; //we use visit matrix but to reduce space complexity we are changing in current matrix
-}
-vector<string> findpath(vector<vector<int>>& mat){
-    int n=mat.size();
-    vector<string> ans;
-    string path="";
-    vector<vector<bool>> vis(n,vector<bool>(n,false));
-    helper(mat,0,0,path,ans,vis);
-    return ans;
-}
+set<vector<int>> s;
+    void combsum(vector<int>& arr, int target,vector<int>& combine,vector<vector<int>>& ans,int idx){
+        int n=arr.size();
+        if(idx==n||target<0){
+            return;
+        }
+        if(target==0){
+            if(s.find(combine)==s.end()){
+            ans.push_back({combine});
+            s.insert(combine);
+            }
+            return;
+        }
+        combine.push_back(arr[idx]);
+        combsum(arr,target-arr[idx],combine,ans,idx+1); //include single
+        combsum(arr,target-arr[idx],combine,ans,idx); //include multiple
+        combine.pop_back();
+        combsum(arr,target,combine,ans,idx+1);// exclude call
 
-int main(){
-    vector<vector<int>> mat={{1,0,0,0},{1,0,1,1},{1,1,0,0},{0,1,1,1}};
-    vector<string> anss=findpath(mat);
-    for(string val: anss){
-        cout<<val<<endl;
     }
-return 0;
-}
+    vector<vector<int>> combinationSum(vector<int>& arr, int target) {
+        vector<int> combine;
+        vector<vector<int>> ans;
+        combsum(arr,target,combine,ans,0);
+        return ans;
+    }
+    int main(){
+        vector<int> arr={2,3,6,7};
+        int target=7;
+        vector<vector<int>> anss=combinationSum(arr, target);
+        for(auto val:anss){
+            for(auto x:val){
+            cout<<x<<" ";
+        }cout<<endl;}
+
+    }
