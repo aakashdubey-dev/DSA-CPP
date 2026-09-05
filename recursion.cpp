@@ -451,44 +451,70 @@ printsubset(arr,i+1,ans[]);}
 // }
 
 //function for combination sum
-#include<iostream>
-#include<vector>
-#include<set>
-using namespace std;
+// #include<iostream>
+// #include<vector>
+// #include<set>
+// using namespace std;
 
-set<vector<int>> s;
-    void combsum(vector<int>& arr, int target,vector<int>& combine,vector<vector<int>>& ans,int idx){
-        int n=arr.size();
-        if(idx==n||target<0){
-            return;
-        }
-        if(target==0){
-            if(s.find(combine)==s.end()){
-            ans.push_back({combine});
-            s.insert(combine);
-            }
-            return;
-        }
-        combine.push_back(arr[idx]);
-        combsum(arr,target-arr[idx],combine,ans,idx+1); //include single
-        combsum(arr,target-arr[idx],combine,ans,idx); //include multiple
-        combine.pop_back();
-        combsum(arr,target,combine,ans,idx+1);// exclude call
+// set<vector<int>> s;
+//     void combsum(vector<int>& arr, int target,vector<int>& combine,vector<vector<int>>& ans,int idx){
+//         int n=arr.size();
+//         if(idx==n||target<0){
+//             return;
+//         }
+//         if(target==0){
+//             if(s.find(combine)==s.end()){
+//             ans.push_back({combine});
+//             s.insert(combine);
+//             }
+//             return;
+//         }
+//         combine.push_back(arr[idx]);
+//         combsum(arr,target-arr[idx],combine,ans,idx+1); //include single
+//         combsum(arr,target-arr[idx],combine,ans,idx); //include multiple
+//         combine.pop_back();
+//         combsum(arr,target,combine,ans,idx+1);// exclude call
 
-    }
-    vector<vector<int>> combinationSum(vector<int>& arr, int target) {
-        vector<int> combine;
-        vector<vector<int>> ans;
-        combsum(arr,target,combine,ans,0);
-        return ans;
-    }
-    int main(){
-        vector<int> arr={2,3,6,7};
-        int target=7;
-        vector<vector<int>> anss=combinationSum(arr, target);
-        for(auto val:anss){
-            for(auto x:val){
-            cout<<x<<" ";
-        }cout<<endl;}
+//     }
+//     vector<vector<int>> combinationSum(vector<int>& arr, int target) {
+//         vector<int> combine;
+//         vector<vector<int>> ans;
+//         combsum(arr,target,combine,ans,0);
+//         return ans;
+//     }
+//     int main(){
+//         vector<int> arr={2,3,6,7};
+//         int target=7;
+//         vector<vector<int>> anss=combinationSum(arr, target);
+//         for(auto val:anss){
+//             for(auto x:val){
+//             cout<<x<<" ";
+//         }cout<<endl;}
 
-    }
+//     }
+
+//function for palindrome partitioning
+// ispalindrome(string part){
+//     int st=0; int end=part.size()-1;
+//     while(st<=end){
+//         if(part[st]!=part[end]){
+//             return false;
+//         }
+//         st++;   end--;
+//     }
+//     void helper(vector<string> store, vector<vector<string>> ans,string s){
+//         int n=s.size();
+//         if(s.size()==0){
+//             ans.push_back(s);
+//             return;
+//         }
+//         for(int i=0;i<n;i++){
+//             string part= s.substr(0,i+1);
+//             if(ispalindrome(part)){
+//                 store.push_back(part);
+//                 helper(s.substr(i+1,n),ans);
+//                 store.pop_back();
+//             }
+//         }
+//     }
+// }
