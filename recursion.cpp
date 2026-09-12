@@ -565,3 +565,36 @@ int main(){
     }
 return 0;
 }
+
+//code for quick sort
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int partition(vector<int>& arr,int st,int end){
+//     int idx=st-1;  int pivot=arr[end];
+//     for(int i=st;i<end;i++){
+//         if(arr[i]>=pivot){
+//             idx++;
+//             swap(arr[i],arr[idx]);
+//         }
+//     }
+//     idx++;
+//     swap(arr[end],arr[idx]);
+//     return idx;
+// }
+// void quicksort(vector<int>& arr,int st,int end){
+//     if(st<end){
+//         int pivotidx=partition(arr,st,end);
+    
+//         quicksort(arr,st,pivotidx-1);
+//         quicksort(arr,pivotidx+1,end);
+//     }
+// }
+// int main(){
+//     vector<int> arr={12,31,35,8,32,17};
+//     quicksort(arr,0,arr.size()-1);
+//     for(int val: arr){
+//         cout<<val<<" ";
+//     }
+//     return 0;
+// }
