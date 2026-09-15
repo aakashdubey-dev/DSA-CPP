@@ -25,7 +25,7 @@
 // return 0;
 // }
 
-//brut force approach)
+//brut force approach
 // #include<iostream>
 // using namespace std;
 // int majorityel(int arr[]){
@@ -45,5 +45,75 @@
 // int main(){
 //     int arr[]={2,3,3};
 //     cout<<majorityel(arr);
+// return 0;
+// }
+
+//pattern printing 
+//code for reverse triangle
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n=5;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n-i;j++){
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+// return 0;
+// }
+
+//code for reverse right triangle
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n=5;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<i;j++){
+//             cout<<" ";
+//         }
+//         for(int k=0;k<n-i;k++){
+//             cout<<n-k;
+//         }
+//         cout<<endl;
+//     }
+// return 0;
+// }
+
+//code for pyramid pattern 
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n=4;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n-i-1;j++){
+//             cout<<" ";
+//         }
+//         for(int k=0;k<(i*2)+1;k++){
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+// return 0;
+// }
+
+//different queston on pyramid patern printing
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n=4;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n-i-1;j++){
+//             cout<<" ";
+//         }
+//         for(int k=0;k<i+1;k++){
+//             cout<<k+1;
+//         }
+//         if(i>=1){
+//         for(int r=i;r>=1;r--){
+//             cout<<r;
+//         }}
+//         cout<<endl;
+//     }
 // return 0;
 // }
