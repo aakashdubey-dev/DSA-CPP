@@ -119,24 +119,25 @@
 // }
 
 //code for hollow traingle 
-#include<iostream>
-using namespace std;
-int main(){
-    int n=4;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n-1-i;j++){
-            cout<<" ";
-        }
-        for(int t=0;t<1;t++){
-            cout<<"*";
-        }
-        if(i>=1){
-            for(int k=0;k<(i*2);k++){
-                cout<<" ";
-            }
-        for(int r=0;r<1;r++){
-            cout<<"*";
-        }}      cout<<endl;
-    }
-return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n=4;
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n-1-i;j++){
+//             cout<<" ";
+//         }
+//         for(int t=0;t<1;t++){
+//             cout<<"*";
+//         }
+//         if(i>=1){
+//             for(int k=0;k<(i*2);k++){
+//                 cout<<" ";
+//             }
+//         for(int r=0;r<1;r++){
+//             cout<<"*";
+//         }}      cout<<endl;
+//     }
+// return 0;
+// }
+
