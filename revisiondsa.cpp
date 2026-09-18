@@ -247,16 +247,16 @@
 // return 0;
 // }
 
-//pair sum (brute force)
+// pair sum (brute force)
 // #include<iostream>
 // #include<vector>
 // using namespace std;
 // void pairsum(vector<int> vec,int target){
 //     int n= vec.size();
-    // if(target==vec[0]){
-    //     cout<<vec[0];
-    //     return;
-    // }
+//     if(target==vec[0]){
+//         cout<<vec[0];
+//         return;
+//     }
 //      int i=0;
 //     if(vec[0]>target){
 //         i=1;
@@ -321,3 +321,60 @@
 //     }
 //     return 0;
 // }
+
+//majority element practice code 
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int majorityel(vector<int> vec){
+//     int n= vec.size();
+//     sort(vec.begin(),vec.end());
+//     int maxappear=INT8_MIN;  int count=1;  int majorityele=0;
+//     for(int i=0;i<n;i++){
+//         if(vec[i]==vec[i+1]){
+//             count++;
+//         }
+//         if(maxappear<count){
+//             majorityele=vec[i];
+//         }
+//         if(vec[i]!=vec[i+1]){
+//             maxappear=max(maxappear,count);
+//             count=1;
+//         }
+//     }
+//     return majorityele;
+// }
+// int main(){
+//     vector<int> vec={1,2,2,3,3,3,4,4,4};
+//     int target =11;
+//     cout<<majorityel(vec);
+// return 0;
+// }
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int majorityel(vector<int> vec){
+    int n= vec.size();
+    sort(vec.begin(),vec.end());
+    int maxappear=INT8_MIN;  int count=1;  int majorityele=0;
+    for(int i=0;i<n-1;i++){
+        if(vec[i]==vec[i+1]){
+            count++;
+            maxappear=max(maxappear,count);
+        }
+        if(vec[i]!=vec[i+1]){
+            count=1;
+        }
+        if(maxappear>n/2){
+            return vec[i];
+        }
+    }
+}
+int main(){
+    vector<int> vec={1,2,5,5,6,5,5,7,7,5,5};
+    cout<<majorityel(vec);
+return 0;
+}
