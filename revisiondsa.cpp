@@ -426,3 +426,24 @@
 //     cout<<power(x,n);
 // return 0;
 // }
+
+//code for stock buy and sell
+#include<iostream>
+using namespace std;
+int stockBS(int arr[],int n){
+    int bestbuy=arr[0];
+    int maxprofit=INT8_MIN;
+    for(int i=1;i<n;i++){
+        if(bestbuy<arr[i]){
+            maxprofit=max(maxprofit,arr[i]-bestbuy);
+        }
+        bestbuy=min(bestbuy,arr[i]);
+    }
+    return maxprofit;
+}
+int main(){
+    int arr[]={2,1,6,4,3,4,6};
+    int n=7;
+    cout<<stockBS(arr,n);
+return 0;
+}
