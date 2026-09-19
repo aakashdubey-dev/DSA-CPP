@@ -352,29 +352,77 @@
 // return 0;
 // }
 
-#include<iostream>
-#include<vector>
-#include<algorithm>
-using namespace std;
-int majorityel(vector<int> vec){
-    int n= vec.size();
-    sort(vec.begin(),vec.end());
-    int maxappear=INT8_MIN;  int count=1;  int majorityele=0;
-    for(int i=0;i<n-1;i++){
-        if(vec[i]==vec[i+1]){
-            count++;
-            maxappear=max(maxappear,count);
-        }
-        if(vec[i]!=vec[i+1]){
-            count=1;
-        }
-        if(maxappear>n/2){
-            return vec[i];
-        }
-    }
-}
-int main(){
-    vector<int> vec={1,2,5,5,6,5,5,7,7,5,5};
-    cout<<majorityel(vec);
-return 0;
-}
+//code for majorityelement
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int majorityel(vector<int> vec){
+//     int n= vec.size();
+//     sort(vec.begin(),vec.end());
+//     int maxappear=INT8_MIN;  int count=1;  int majorityele=0;
+//     for(int i=0;i<n-1;i++){
+//         if(vec[i]==vec[i+1]){
+//             count++;
+//             maxappear=max(maxappear,count);
+//         }
+//         if(vec[i]!=vec[i+1]){
+//             count=1;
+//         }
+//         if(maxappear>n/2){
+//             return vec[i];
+//         }
+//     }
+// }
+// int main(){
+//     vector<int> vec={1,2,5,5,6,5,5,7,7,5,5};
+//     cout<<majorityel(vec);
+// return 0;
+// }
+
+//code  for compute x^n(brute force approch)
+// #include<iostream>
+// using namespace std;
+// int power(int x ,int n){
+//     int ans=x;
+//     for(int i=1;i<n;i++){
+//         ans*=x;
+//     }
+//     return ans;
+// }
+// int main(){
+//     int x=2;
+//     int n=5;
+//     cout<<power(x,n);
+// return 0;
+// }
+
+//optimized approach
+// #include<iostream>
+// using namespace std;
+// double power(double x,double n){
+//     //edge case
+//     if(x<0){return x;}
+//     if(n=0){return 1;}
+//     if(x==0){return 0;}
+//     long bf=n; 
+//     double ans=1;
+//     if(bf<0){
+//         x=1/x;
+//         bf=-(bf);
+//     }
+//     while(bf>0){
+//         if(bf%2==1){
+//             ans*=x;
+//         } 
+//         x*=x;
+//         bf=bf/2;
+//     }
+//     return ans;  
+// }
+// int main(){
+//     double x=2;
+//     double n=5;
+//     cout<<power(x,n);
+// return 0;
+// }
