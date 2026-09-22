@@ -428,22 +428,74 @@
 // }
 
 //code for stock buy and sell
-#include<iostream>
-using namespace std;
-int stockBS(int arr[],int n){
-    int bestbuy=arr[0];
-    int maxprofit=INT8_MIN;
-    for(int i=1;i<n;i++){
-        if(bestbuy<arr[i]){
-            maxprofit=max(maxprofit,arr[i]-bestbuy);
-        }
-        bestbuy=min(bestbuy,arr[i]);
-    }
-    return maxprofit;
-}
-int main(){
-    int arr[]={2,1,6,4,3,4,6};
-    int n=7;
-    cout<<stockBS(arr,n);
-return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int stockBS(int arr[],int n){
+//     int bestbuy=arr[0];
+//     int maxprofit=INT8_MIN;
+//     for(int i=1;i<n;i++){
+//         if(bestbuy<arr[i]){
+//             maxprofit=max(maxprofit,arr[i]-bestbuy);
+//         }
+//         bestbuy=min(bestbuy,arr[i]);
+//     }
+//     return maxprofit;
+// }
+// int main(){
+//     int arr[]={2,1,6,4,3,4,6};
+//     int n=7;
+//     cout<<stockBS(arr,n);
+// return 0;
+// }
+
+//container with most water
+// #include<iostream>
+// using namespace std;
+// void most_water(int arr[],int n){
+//     int st=0;int end=n-1;int hgt=0;int length=0;
+//     int max_container=INT8_MIN;
+//     while(st<end){
+//         hgt=min(arr[st],arr[end]);
+//         length=end-st;
+//         max_container=max(max_container,(hgt*length));
+//         if(arr[st]<arr[end]){
+//             st++;
+//         }else{
+//             end--;
+//         }
+//     }
+//     cout<<max_container;
+// }
+// int main(){
+//     int h[5]={5,4,3,2,1};
+//     most_water(h,5);
+// return 0;
+// }
+
+//product of array except itself(brute force)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> product(vector<int>& vec,vector<int> ans){
+//     int n=vec.size();
+//     for(int i=0;i<n;i++){
+//         int multiply=1;
+//         for(int j=0;j<n;j++){
+//             if(vec[i]==vec[j]){
+//                 continue;
+//             }
+//             multiply*=vec[j];
+//         }
+//         ans.push_back(multiply);
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<int> ans;
+//     vector<int> vec={1,2,3,4};
+//     vector<int> anss=product(vec,ans);
+//     for(int val:anss){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
