@@ -499,3 +499,30 @@
 //     }
 // return 0;
 // }
+
+//code for binary search
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int binarysearch(vector<int> vec,int target){
+//     int st=0; int end=vec.size()-1;
+//     while(st<=end){
+//         int mid=(st + end)/2;
+//         if(target==vec[mid]){
+//             return mid;
+//         }
+//         if(target>vec[mid]){
+//             st=mid+1;
+//         }else{
+//             end=mid-1;
+//         }
+//     }
+// }
+// int main(){
+//     vector<int> vec={1,3,4,6,8,9};
+//     int target=8;
+//     cout<<binarysearch(vec,target);
+// return 0;
+// }
+
