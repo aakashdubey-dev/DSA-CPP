@@ -527,34 +527,79 @@
 // }
 
 //code for search in rotated sorted array
-#include<iostream>
-#include<vector>
-using namespace std;
-int search(vector<int> vec,int target){
-    int st=0;  int end =vec.size()-1;
-    while(st<=end){
-        int mid=st+(end-st)/2;
-        if(target==vec[mid]){
-            return mid;
-        }
-        if(vec[st]<=vec[mid]){
-        if(target>=vec[st]&& target<vec[mid]){
-            end=mid-1;
-        }else{
-            st=mid+1;
-        }}else{
-            if(target<vec[end]&& target>=vec[mid]){
-                end=mid-1;
-            }else{
-                st=mid+1;
-            }
-        }
-    }
-return -1;
-}
-int main(){
-    vector<int> vec={4,5,6,7,1,2,3};
-    int target=3;
-    cout<<search(vec,target);
-return 0;
-}
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int search(vector<int> vec,int target){
+//     int st=0;  int end =vec.size()-1;
+//     while(st<=end){
+//         int mid=st+(end-st)/2;
+//         if(target==vec[mid]){
+//             return mid;
+//         }
+//         if(vec[st]<=vec[mid]){
+//         if(target>=vec[st]&& target<vec[mid]){
+//             end=mid-1;
+//         }else{
+//             st=mid+1;
+//         }}else{
+//             if(target<vec[end]&& target>=vec[mid]){
+//                 end=mid-1;
+//             }else{
+//                 st=mid+1;
+//             }
+//         }
+//     }
+// return -1;
+// }
+// int main(){
+//     vector<int> vec={4,5,6,7,1,2,3};
+//     int target=3;
+//     cout<<search(vec,target);
+// return 0;
+// }
+
+//code for peak index in a mountainm array(bruet force approach)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int peakindex(vector<int> vec){
+//     int n= vec.size(); int peakindex=INT8_MIN;
+//     for(int i=1;i<n;i++){
+//         if(vec[i]>=vec[i-1]){
+//             peakindex=max(peakindex,i);
+//         }   
+//     }
+//     return peakindex;
+// }
+// int main(){
+//     vector<int> vec={1,3,5,7,6,4,2};
+//     cout<<peakindex(vec);
+// return 0;
+// }
+
+//(optiomized approch)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int peak(vector<int> vec){
+//     int st=1; int end=vec.size()-2;
+//     int mid=0;
+//     while(st<=end){
+//         mid=(st+end)/2;
+//         if(vec[mid-1]<vec[mid]&&vec[mid]>vec[mid+1]){
+//             return mid;
+//         }
+//         if(vec[mid-1]>vec[mid]&& vec[mid]>vec[mid+1]){
+//             end=mid-1;
+//         }
+//         if(vec[mid-1]<vec[mid]&& vec[mid]<vec[mid+1]){
+//             st=mid+1;
+//         }
+//     }
+// }
+// int main(){
+//     vector<int> vec={0,3,8,9,5,2};
+//     cout<<peak(vec);
+// return 0;
+// }
