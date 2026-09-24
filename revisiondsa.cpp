@@ -603,3 +603,36 @@
 //     cout<<peak(vec);
 // return 0;
 // }
+
+//code for single element in sorted array
+// #include<iostream>
+// #include<vector>
+// using namespace std; 
+// int singleel(vector<int> vec){
+//     int st=0;  int end =vec.size()-1;
+//     int mid=0;
+//     while(st<=end){
+//         mid=st+(end-st)/2;
+//         if(vec[mid-1]!=vec[mid]&&vec[mid]!=vec[mid+1]){
+//             return mid;
+//         }if(mid %2==0){
+//         if(vec[mid-1]==vec[mid]&& vec[mid+1]!=vec[mid]){
+//             end =mid-1;
+//         }else{
+//             st=mid+1;
+//         }
+//     }if(mid %2!=0){
+//         if(vec[mid-1]==vec[mid]&& vec[mid+1]!=vec[mid]){
+//             st=mid+1;
+//         }else{
+//             end=mid-1;
+//         }
+//     }
+// }
+//     return mid;
+// } 
+// int main(){
+//     vector<int> vec={1,2,2,3,3,4,4,6,6};
+//     cout<<singleel(vec);
+// return 0;
+// }
