@@ -636,3 +636,54 @@
 //     cout<<singleel(vec);
 // return 0;
 // }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// bool isvalid(vector<int> arr,int n,int stu,int mid){
+//     int student=1;
+//     int sum=0;
+//     for(int i=0;i<n;i++){
+//         sum+=arr[i];
+//         if(sum>mid){
+//             student++;
+//             sum=arr[i];
+//         }
+//     }
+//     if(student>stu){
+//         return false;
+//     }
+//     return true;
+// }
+// int bookallocation(vector<int> arr,int stu){
+//     int n=arr.size();  int maxel=INT8_MIN;
+//     int result=-1;
+//     int totalpages=0; int mid=0;
+//     for(int i=0;i<n;i++){
+//         maxel=max(maxel,arr[i]);
+//     }
+//     for(int i=0;i<n;i++){
+//         totalpages+=arr[i];
+//     }
+//     int st=maxel; int end=totalpages;
+//     if(stu>n){
+//         return -1;
+//     }
+//     while(st<=end){
+//         mid=(st+end)/2;
+//         if(isvalid(arr,n,stu,mid)){
+//             result=mid;
+//             end=mid-1;
+//         }
+//         else{
+//             st=mid+1;
+//         }
+//     }
+//     return result;
+// }
+// int main(){
+//     vector<int> arr ={10,20,30,40};
+//     int stu=2;
+//     cout<<bookallocation(arr,stu);
+// return 0;
+// }
