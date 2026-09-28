@@ -765,3 +765,71 @@
 //     }
 // return 0;
 // }
+
+//colour sort(optimized approach)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> colour_sort(vector<int>& vec){
+//     int n=vec.size();
+//     int count0=0, count1=0, count2=0;
+//     for(int i=0;i<n;i++){
+//         if(vec[i]==0){
+//             count0++;
+//         }
+//         else if(vec[i]==1){
+//             count1++;
+//         }else{
+//             count2++;
+//         }
+//     }
+//     for(int i=0;i<count0;i++){
+//         vec[i]=0;
+//     }
+//     for(int i=count0;i<count1+count0;i++){
+//         vec[i]=1;
+//     }
+//     for(int i=count0+count1;i<(count0+count1+count2);i++){
+//         vec[i]=2;
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={0,1,0,2,1,2,0,1,2};
+    // vector<int> ans=colour_sort(vec);
+    // for(int val:ans){
+    //     cout<<val<<" ";
+    // }
+// return 0;
+// }
+
+//colour sort(By DNF Algorithm)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> colour_sort(vector<int> &vec){
+//     int low=0,mid=0,high=vec.size()-1;
+//     while(mid<=high){
+//         if(vec[mid]==0){
+//             swap(vec[mid],vec[low]);
+//             mid++;
+//             low++;
+//         }
+//         else if(vec[mid]==1){
+//             mid++;
+//         }
+//         else{
+//             swap(vec[mid],vec[high]);
+//             high--;
+//         }
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={0,1,0,2,1,2,0,1,2};
+//     vector<int> ans=colour_sort(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }   
+// return 0;
+// }
