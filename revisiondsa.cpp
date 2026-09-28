@@ -739,3 +739,29 @@
 //         cout<<val<<" ";
 //     }
 // }
+
+//colour sort(brute force approach)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> colour_sort(vector<int> &vec){
+//     int n=vec.size();
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<n-1;j++){
+//             if(vec[j+1]<vec[j]){
+//                 swap(vec[j+1],vec[j]);
+//             }if(vec[j+1]>=vec[j]){
+//                 continue;
+//             }
+//         }
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={0,1,0,2,1,2,0,1,2};
+//     vector<int> ans=colour_sort(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
