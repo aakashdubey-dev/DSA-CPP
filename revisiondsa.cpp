@@ -687,3 +687,55 @@
 //     cout<<bookallocation(arr,stu);
 // return 0;
 // }
+
+//code for bubble sort
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> bubblesort(vector<int>& vec){
+//     int n=vec.size();
+//     for(int i=0;i<n;i++){
+//         for(int j=1;j<n-i;j++){
+//             if(vec[j-1]>vec[j]){
+//                 swap(vec[j],vec[j-1]);
+//             }else{
+//                 continue;
+//             }
+//         }
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={4,1,5,2,3};
+//     vector<int> ans=bubblesort(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
+
+//code for insertion sort
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> insertion_sort(vector<int> &vec){
+//     int n=vec.size();
+//     for(int i=1;i<n;i++){
+//         int curr=vec[i];
+//         int prev=i-1;
+//         while(prev>=0&&vec[prev]>curr){
+//             vec[prev+1]=vec[prev];
+//             prev--;
+//         }
+//         vec[prev+1]=curr;
+//     }
+//     return vec;
+// }
+
+// int main(){
+//     vector<int> vec={4,1,5,2,3};
+//     vector<int> ans=insertion_sort(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// }
