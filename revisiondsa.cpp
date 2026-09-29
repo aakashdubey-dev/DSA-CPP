@@ -871,13 +871,48 @@
 //     return vec;
 // }
 // int main(){
-//     vector<int> nums1={4,5,6};
+    // vector<int> nums1={4,5,6};
+    // vector<int> nums2={2,4};
+    // int m=3,n=2;
+    // vector<int> ans=merge(nums1,nums2,m,n);
+    // for(int val: ans){
+    //     cout<<val<<" ";
+//     }
+// return 0;
+//}
+
+//(most optimal approach)
+//merge sorted array(most optimal approach)
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> merge(vector<int>& nums1,vector<int>& nums2,int m,int n){
+//     int idx1=m-1, idx2=n-1, idx3=(m+n)-1;
+//     while(idx1>=0&&idx2>=0){
+//         if(nums1[idx1]<=nums2[idx2]){
+//             nums1[idx3]=nums2[idx2];
+//             idx2--; idx3--;
+//         }
+//         else{
+//             nums1[idx3]=nums1[idx1];
+//             idx1--; idx3--;
+//         }
+//     }
+//     while(idx2>=0){
+//         nums1[idx3]=nums2[idx2];
+//         idx2--; idx3--;
+//     }
+//     return nums1;
+// }
+// int main(){
+//     vector<int> nums1={4,5,6,0,0};
 //     vector<int> nums2={2,4};
 //     int m=3,n=2;
 //     vector<int> ans=merge(nums1,nums2,m,n);
 //     for(int val: ans){
-//         cout<<val<<" ";
-//     }
+//     cout<<val<<" ";
+// }
 // return 0;
 // }
+
 
