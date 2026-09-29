@@ -833,3 +833,50 @@
 //     }   
 // return 0;
 // }
+
+//code for(merge two sorted array)
+#include<iostream>
+#include<vector>
+using namespace std;
+vector<int> merge(vector<int> &nums1,vector<int>& nums2,int m,int n){
+    if(m==0){
+        nums1[0]=nums2[0];
+        return nums1;
+    }
+    if(n==0){
+        return nums1;
+    }
+    int idx1=0; int idx2=0; int idxv=0;
+    vector<int> vec(n+m);
+    while(idx1<m&&idx2<n){
+        if(nums1[idx1]<=nums2[idx2]){
+            vec[idxv]=nums1[idx1];
+            idx1++;
+        }else if(nums1[idx1]>nums2[idx2]){
+            vec[idxv]=nums2[idx2];
+            idx2++;
+        }
+        idxv++;
+    }
+    while(idx1<m){
+        vec[idxv]=nums1[idx1];
+        idx1++;
+        idxv++;
+    }
+    while(idx2<n){
+        vec[idxv]=nums2[idx2];
+        idx2++;
+        idxv++;
+    }
+    return vec;
+}
+int main(){
+    vector<int> nums1={4,5,6};
+    vector<int> nums2={2,4};
+    int m=3,n=2;
+    vector<int> ans=merge(nums1,nums2,m,n);
+    for(int val: ans){
+        cout<<val<<" ";
+    }
+return 0;
+}
