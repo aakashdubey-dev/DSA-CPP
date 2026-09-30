@@ -915,4 +915,29 @@
 // return 0;
 // }
 
-
+//code for next permutation
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> nxt_per(vector<int>& vec){
+//     int j=vec.size()-1;
+//     if(vec[j]<vec[j-1]&&vec[j]<vec[j-2]){
+//         swap(vec[j],vec[j-2]);
+//     }
+//     else if(vec[j]<vec[j-1]&&vec[j]>vec[j-2]){
+//         swap(vec[j],vec[j-2]);
+//         swap(vec[j],vec[j-1]);
+//     }
+//     else{
+//         swap(vec[j],vec[j-1]);
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={2,1,3};
+//     vector<int> ans=nxt_per(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
