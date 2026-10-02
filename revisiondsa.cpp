@@ -983,3 +983,64 @@
 //     }
 // return 0;
 // }
+
+//code for understanding the string
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     string str="aakash";
+//     string str1=" dubey";
+//     //concetination
+//     string str2=str+str1;
+//     cout<<str2<<endl;
+//     //finding length
+//     cout<<str.length();
+// return 0;
+// }
+
+//valid palindrome
+// #include<iostream>
+// using namespace std;
+// bool validpalindrome(string str){
+//     int st=0; int end =str.length()-1;
+//     while(st<=end){
+//         if(isalnum(str[st])==false){
+//             st++;
+//             continue;
+//         }
+//         if(isalnum(str[end])==false){
+//             end--;
+//             continue;
+//         }
+//         if(tolower(str[st])!=tolower(str[end])){
+//             return false;
+//         }
+//         st++;
+//         end--;
+//     }
+//     return true;
+// }
+// int main(){
+//     string s ="a man, a plan ,a canal:Panama";
+//     cout<<validpalindrome(s);
+// return 0;
+// }
+
+//code for remove all occurance
+// #include<iostream>
+// using namespace std;
+// string remove_occ(string &s,string part){
+//     int st=0;
+//     while(s.find(part)<s.length()){
+//         int pos=s.find(part);
+//         s.erase(pos,part.length());
+//         continue;
+// }
+//     return s;
+// }
+// int main(){
+//     string s="daabbc";
+//     string part="ab";
+//     cout<<remove_occ(s,part);
+// return 0;
+// }
