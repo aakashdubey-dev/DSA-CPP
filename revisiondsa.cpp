@@ -941,3 +941,45 @@
 //     }
 // return 0;
 //
+
+//code for next permutation(optimal approach)
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// vector<int> nxt_per(vector<int> &vec){
+//     int n=vec.size(); int pivot=0;
+//     for(int i=n-2;i>=0;i--){
+//         if(vec[i]<vec[i+1]){
+//             pivot=i;
+//             break;
+//         }
+//     }
+//     if(pivot==0){
+//         reverse(vec.begin(),vec.end());
+//         return vec;
+//     }
+//     for(int j=n-1;j>=0;j--){
+//         if(vec[pivot]<vec[j]){
+//             swap(vec[pivot],vec[j]);
+//             break;
+//         }
+//     }
+//     // reverse(vec.begin()+(pivot+1),vec.end()); direct 
+//     //by two pointer
+//     int st=pivot+1;
+//     int end =n-1;
+//     while(st<end){
+//         swap(vec[st],vec[end]);
+//         st++; end--;
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={6,5,4,3,2,1};
+//     vector<int> ans =nxt_per(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
