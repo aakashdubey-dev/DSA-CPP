@@ -1044,3 +1044,25 @@
 //     cout<<remove_occ(s,part);
 // return 0;
 // }
+
+//permutation in string 
+#include<iostream>
+using namespace std;
+bool perm(string s1,string s2){
+    int st1=0; int end1=1;
+    int st2=0; int end2=1;
+    while(end2<=s2.length()-1){
+        if((s2[st2]==s1[st1]||s2[st2]==s1[end1])&&(s2[end2]==s1[st1]||s2[end2]==s1[end1])){
+            return true;
+        }
+        st2++;
+        end2++;
+    }
+    return false;
+}
+int main(){
+    string s1="ab";
+    string s2="nzxrtbtarnxz";
+    cout<<perm(s1,s2);
+return 0;
+}
