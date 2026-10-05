@@ -1068,30 +1068,31 @@
 // }
 
 //code for find first unique character in a string
-#include<iostream>
-using namespace std;
-int unique(string s){
-    int n= s.length();
-    for(int i=0;i<n;i++){
-        bool flag=true;
-        for(int j=0;j<n;j++){
-            if(j==i){
-                continue;
-            }
-            if(s[i]==s[j]){
-                flag=false;
-                break;
-            }
-        }
-        if(flag==false){continue;}
-        else{return i;}
-    }
-    return -1;
-}
-int main(){
-    string s="aa";
-    cout<<unique(s);
-    return 0;
-}
+// #include<iostream>
+// using namespace std;
+// int unique(string s){
+//     int n= s.length();
+//     for(int i=0;i<n;i++){
+//         bool flag=true;
+//         for(int j=0;j<n;j++){
+//             if(j==i){
+//                 continue;
+//             }
+//             if(s[i]==s[j]){
+//                 flag=false;
+//                 break;
+//             }
+//         }
+//         if(flag==false){continue;}
+//         else{return i;}
+//     }
+//     return -1;
+// }
+// int main(){
+//     string s="aa";
+//     cout<<unique(s);
+//     return 0;
+// }
+
 
 
