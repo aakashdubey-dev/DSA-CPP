@@ -1094,5 +1094,38 @@
 //     return 0;
 // }
 
+//code for valid anagram
+// #include<iostream>
+// using namespace std;
+// bool anagram(string s,string t){
+//         int n=s.length(); int m=t.length();
+//         int count_actual=0;
+//         if(m!=n){return false;}
+//         for(int i=0;i<n;i++){
+//             int count_s=0; int count_t=0;
+//             for(int j=0;j<n;j++){
+//                 if(s[i]==t[j]){
+//                     count_s++;
+//                 }
+//             }
+//             for(int j=0;j<m;j++){
+//                 if(t[i]==s[j]){
+//                     count_t++;
+//                 }
+//         }
+//         if(count_s==0&&count_t==0){return false;}
+//         if(count_s==count_t){
+//             count_actual++;
+//         }
+//     }
+//     if(count_actual==n){return true;}
+//     else{return false;}
+// }
 
+// int main(){
+//     string s="anagram";
+//     string t="nagaram";
+//     cout<<anagram(s,t);
+// return 0;
+// }
 
