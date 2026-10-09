@@ -1130,27 +1130,27 @@
 // }
 
 //selection sort 
-#include<iostream>
-#include<vector>
-using namespace std;
-vector<int> selection_sort(vector<int> &vec){
-    int n= vec.size();
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            if(vec[i]<=vec[j]){
-                continue;
-            }else{
-                swap(vec[i],vec[j]);
-            }
-        }
-    }
-    return vec;
-}
-int main(){
-    vector<int> vec={56,3,5,3,1,5,7,90};
-    vector<int> ans=selection_sort(vec);
-    for(int val:ans){
-        cout<<val<<" ";
-    }
-return 0;
-}
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> selection_sort(vector<int> &vec){
+//     int n= vec.size();
+//     for(int i=0;i<n;i++){
+//         for(int j=i+1;j<n;j++){
+//             if(vec[i]<=vec[j]){
+//                 continue;
+//             }else{
+//                 swap(vec[i],vec[j]);
+//             }
+//         }
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={56,3,5,3,1,5,7,90};
+//     vector<int> ans=selection_sort(vec);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
