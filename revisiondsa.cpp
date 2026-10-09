@@ -1154,3 +1154,66 @@
 //     }
 // return 0;
 // }
+
+//hashing (two sum)
+// #include<iostream>
+// #include<vector>
+// #include<map>
+// using namespace std;
+// vector<int> two_sum(vector<int> vec,int target){
+//     int n= vec.size();
+//     map<int,int> m;
+//     for(int i=0;i<n;i++){
+//         int first=vec[i];
+//         int sec=target-first;
+//         if(m.find(sec)!=m.end()){
+//             return {m[sec],i};
+//         }
+//         else{
+//             m[first]=i;
+//         }
+//     }
+// }
+// int main(){
+//     vector<int> vec={7,2,5,1,9};
+//     int target=16;
+//     vector<int> mm=two_sum(vec,target);
+//     for(int val:mm){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
+
+//code for (3sum)
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<vector<int>> three_sum(vector<int> vec){
+//     int n=vec.size();
+//     set<vector<int>> ans;
+//     for(int i=0;i<n;i++){
+//         int target=-(vec[i]);
+//         set<int> s;
+//         for(int j=i+1;j<n;j++){
+//             int third=target-vec[j];
+//             if(s.find(third)!=s.end()){
+//                 vector<int> trip={vec[i],vec[j],third};
+//                 sort(trip.begin(),trip.end());
+//                 ans.insert(trip);
+//             }
+//                 s.insert(vec[j]);
+//         }
+//     }
+//     vector<vector<int>> anss(ans.begin(),ans.end());
+//     return anss;
+// }
+// int main(){
+//     vector<int> vec={-1,0,1,2,-1};
+//     vector<vector<int>> show=three_sum(vec);
+//     for(auto it:show){
+//         for(int x:it){
+//             cout<<x<<" ";
+//         }
+//         cout<<endl;
+//     }
+// return 0;
+// }
