@@ -1217,3 +1217,42 @@
 //     }
 // return 0;
 // }
+
+//contain duplicates
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     vector<int> vec={1,2,3,4};
+//     int n=vec.size();
+
+//     unordered_set<int> ans(vec.begin(),vec.end());
+//     int m=ans.size();
+//     cout<<n<<" "<<ans.size()<<" ";
+//     if(n==m){cout<<false;}
+//     else{
+//         cout<<true;
+//     }
+// }
+
+//code for (longest sequence i ans array)
+// #include<bits/stdc++.h>
+// using namespace std;
+// int longest_sequence(vector<int> vec){
+//     set<int> ans(vec.begin(),vec.end());
+//     vector<int> nums(ans.begin(),ans.end());
+//     int n=nums.size(); int count =1; int max_count=1;
+//     for(int i=0;i<n;i++){
+//         if((nums[i+1]-nums[i])==1){
+//             count++;
+//             max_count=max(max_count,count);
+//         }
+//         else{
+//             count=1;
+//         }
+//     }
+//     return max_count;
+// }
+// int main(){
+//     vector<int> vec={100,4,200,3,2,1};
+//     cout<<longest_sequence(vec);
+// }
