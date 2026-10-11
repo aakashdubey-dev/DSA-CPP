@@ -1256,3 +1256,58 @@
 //     vector<int> vec={100,4,200,3,2,1};
 //     cout<<longest_sequence(vec);
 // }
+
+
+//oops revision
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     class teacher{
+//         private:
+//         double salary;
+//         public:
+//         string depart="cs";
+//         string name="Aakash";
+//         int age=20;
+//         //setter
+//         void setter(double s){
+//             salary=s;
+//         }
+//         //getter
+//         double getter(){
+//             return salary;
+//         }
+//     };
+//     teacher t1;
+//     cout<<t1.name <<t1.age<<t1.depart<<endl;
+//     t1.setter(4534.89);
+//     cout<<t1.getter();
+
+// }
+
+//constructor
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     class student{
+//         public:
+//         string name;
+//         string fav_subject;
+//         int age;     
+//         //non-paramitarized constructor
+//         student(){
+//             cout<<"i am constructor";
+//         }
+//         //paramitirized constructor
+//         student(string n,string f,int a){
+//             name=n;
+//             fav_subject=f;
+//             age=a;
+//         }
+//         void show(){
+//             cout<<name<<" "<<fav_subject<<" "<<age;
+//         }
+//     };
+//     student s("aakash","c++",19);
+//     s.show();
+// }
