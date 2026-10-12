@@ -1311,3 +1311,28 @@
 //     student s("aakash","c++",19);
 //     s.show();
 // }
+
+//copy constructor
+// #include<iostream>
+// using namespace std;
+// int main(){
+// class bank{
+// public:
+//     int acc_no;
+//     string acc_holder_name;
+//     bank(int a,string h){
+//         acc_no=a;
+//         acc_holder_name=h;
+//     }
+//     bank(bank &obj){
+//         this-> acc_no=obj.acc_no;
+//         this->acc_holder_name=obj.acc_holder_name;
+//     }
+//     void getinfo(){
+//         cout<<acc_no<<" "<<acc_holder_name;
+//     }
+// };
+// bank c(232310,"spiderman");
+// bank d(c);
+// d.getinfo();
+// }
