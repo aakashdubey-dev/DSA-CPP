@@ -1336,3 +1336,41 @@
 // bank d(c);
 // d.getinfo();
 // }
+
+//    void merging(vector<int>& nums,vector<int> &result ,int low,int mid,int high,int n){
+//         int st_first=low; int end_first=mid;
+//         int st_sec=mid+1; int end_sec=high; int idx=low;
+//         while(st_first<=mid&&st_sec<=high){
+//             if(nums[st_first]<nums[st_sec]){
+//                 result[idx++]=nums[st_first++];
+//             }else{
+//                 result[idx++]=nums[st_sec++];
+//             }
+//         }
+//         while(st_first<=mid){
+//             result[idx++]=nums[st_first++];
+//         }
+//         while(st_sec<=high){
+//             result[idx++]=nums[st_sec++];
+//         }
+//             for(int i=low;i<=high;i++){
+//             nums[i]=result[i];
+//         }
+//     }
+//     vector<int> sortArray(vector<int>& nums) {
+//         int n=nums.size();
+//         int low,high,mid,p; 
+//         vector<int> result(n);
+//         for(p=2;p/2<n;p=p*2){
+//             for(int i=0;i+p/2<n;i=i+p){
+//                 low=i;
+//                 mid=i+p/2-1;
+//                 high=min(i+p-1,n-1);
+//                 merging(nums,result,low,mid,high,n);
+//             }
+//         }
+//         if(p/2<n){
+//             merging(nums,result,0,(p/2)-1,n-1,n);
+//         }
+//         return nums;
+//     }
