@@ -1374,3 +1374,73 @@
 //         }
 //         return nums;
 //     }
+
+//code for merging 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> merging(vector<int> a,vector<int> b){
+//     int n=a.size();
+//     int m=b.size();
+//     vector<int> ans;
+//     int idx=0;
+//     int track_a=0; int track_b=0;
+//     while(track_a<n&&track_b<m){
+//         if(a[track_a]<b[track_b]){
+//             ans.push_back(a[track_a]);
+//             track_a++;
+//         }else{
+//             ans.push_back(b[track_b]);
+//             track_b++;
+//         }
+//     }
+//     while(track_a<n){
+//         ans.push_back(a[track_a++]);
+//         track_a++;
+//     }
+//     while(track_b<m){
+//         ans.push_back(b[track_b++]);
+//         track_b++;
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<int> a={1,3,5,7};
+//     vector<int> b={2,4,6,8};
+//     vector<int> result=merging(a,b);
+//     for(int val:result){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
+
+//intersection b/t two arrays
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// vector<int> intersection(vector<int> a,vector<int> b){
+//     int n=a.size(); int m=b.size();
+//     vector<int> result; vector<bool> used(m,false);
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<m;){
+//             if(a[i]==b[j]&&used[j]==false){
+//                 result.push_back(a[i]);
+//                 used[j]=true;
+//                 j++; 
+//                 break;
+//             }else{
+//                 j++;
+//             }
+//         }
+//     }
+//     return result;
+// }
+// int main(){
+//     vector<int> a={2,2,2,2};
+//     vector<int> b={2,2};
+//     vector<int> ans=intersection(a,b);
+//     for(int val:ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
