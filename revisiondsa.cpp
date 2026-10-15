@@ -1444,3 +1444,54 @@
 //     }
 // return 0;
 // }
+
+//set zeros in matrix
+#include<iostream>
+#include<vector>
+using namespace std;
+void set_zero(vector<vector<int>>& matrix,vector<vector<bool>> &visited,int row,int col,int n,int m){
+    //in col
+    for(int i=0;i<n;i++){
+        if(matrix[i][col]==0){
+            continue;
+        }else{
+        matrix[i][col]=0;
+        visited[i][col]=true;
+        }
+    }
+    for(int j=0;j<m;j++){
+        if(matrix[row][j]==0){
+            continue;
+        }else{
+        matrix[row][j]=0;
+        visited[row][j]=true;
+        }
+    }
+}
+vector<vector<int>> check_zero(vector<vector<int>> & matrix){
+    int n=matrix.size();
+    int m=matrix[0].size();
+    vector<vector<bool>> visited(n,vector<bool>(m,false));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if(visited[i][j]==false&&matrix[i][j]==0){
+                set_zero(matrix,visited,i,j,n,m);
+            }else{
+                continue;
+            }
+        }
+    }
+    return matrix;
+}
+int main(){
+    vector<vector<int>> matrix = {{1,1,1,4},{1,0,1,8},{0,1,1,9}};
+    vector<vector<int>> ans=check_zero(matrix);
+    int n=ans.size(); int m=ans[0].size();
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cout<<ans[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+return 0;
+}
