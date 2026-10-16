@@ -1495,3 +1495,43 @@
 //     }
 // return 0;
 // }
+
+//code for merge intervals
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<vector<int>> merge_intervals(vector<vector<int>> &matrix){
+//      vector<int> collect(2);
+//      vector<vector<int>> ans;
+//      int n=matrix.size();
+//      for(int i=0;i<n-1;i++){
+//         for(int j=0;j<2;j++){
+//             collect[j]=matrix[i][j];
+//         }
+//         sort(collect.begin(),collect.end());
+//         int st=collect[0];
+//         int end = collect[1];
+//         int x=min(st,end); int y=max(st,end);
+//         int idx=i+1;
+//         int a=min(matrix[idx][0],matrix[idx][1]);
+//         int b=max(matrix[idx][0],matrix[idx][1]);
+//         if(st>=a&&st<=b||end>=a&& end<=b){
+//             ans.push_back({min(x,a),max(y,b)});
+//         }else{
+//             ans.push_back({collect});
+//         }
+//      }
+//      return ans;
+// }
+// int main(){
+//     vector<vector<int>> matrix={{1,4},{4,5}};
+//     vector<vector<int>> res=merge_intervals(matrix);
+//     int n=res.size();
+//     int m=res[0].size();
+//     for(int i=0;i<n;i++){
+//         for(int j=0;j<2;j++){
+//             cout<<res[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+// return 0;
+// }
