@@ -1535,3 +1535,43 @@
 //     }
 // return 0;
 // }
+
+//code for intersection of multiple arrays
+// #include<bits/stdc++.h>
+// using namespace std;
+// set<int> intersection_multiple_arr(vector<vector<int>> nums){
+//     int n=nums.size();
+//     set<int> ans;
+//     unordered_map<int,int> box;
+//     if(n==1){
+//         ans=nums[0];
+//         sort(ans.begin(),ans.end());
+        
+//     }
+//     for(int i=0;i<n;i++){
+//         int m=nums[i].size();
+//         unordered_set<int> check;
+//         for(int j=0;j<m;j++){
+//             if(check.find(nums[i][j])==check.end()){
+//                 check.insert(nums[i][j]);
+//             if(box.find(nums[i][j])!=box.end()){
+//                 box[nums[i][j]]++;
+//                 if(box[nums[i][j]]>=n){
+//                     ans.insert(nums[i][j]);
+//                 }
+//             }else{
+//                 box[nums[i][j]]++;
+//         }}else{
+//             check.insert(nums[i][j]);
+//         }
+//         }
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<vector<int>> nums={{2,3,4,5,6},{2,3},{2,3,4}};
+//     set<int> res=intersection_multiple_arr(nums);
+//     for(int val:res){
+//         cout<<val<<" ";
+//     }
+// }
