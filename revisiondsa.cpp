@@ -1577,41 +1577,41 @@
 // }
 
 //code for (search in sorted arrays second)
-#include<bits/stdc++.h>
-using namespace std;
-bool search(vector<int> vec,int target){
-    int n=vec.size();
-    int st=0; int end=n-1;
-    while(st<=end){
-        int mid=st+(end-st)/2;
-        if(vec[mid]==target){
-            return true;
-        }
-        if(vec[mid]==vec[st]){
-            st++;
-            continue;
-        }
-        //left half sorted
-        if(vec[st]<=vec[mid]){
-            if(vec[st]<=target&&vec[mid]>=target){
-                end=mid-1;
-            }else{
-                st=mid+1;
-            }
-        //right half sorted
-        }else{
-            if(vec[mid]<=target&&vec[end]>=target){
-                st=mid+1;
-            }else{
-                end=mid-1;
-            }
-        }
-    }
-return false;
-}
-int main(){
-    vector<int> vec={1,3,1,1,1};
-    int target=3;
-    cout<<search(vec,target)<<endl;
-return 0;
-}
+// #include<bits/stdc++.h>
+// using namespace std;
+// bool search(vector<int> vec,int target){
+//     int n=vec.size();
+//     int st=0; int end=n-1;
+//     while(st<=end){
+//         int mid=st+(end-st)/2;
+//         if(vec[mid]==target){
+//             return true;
+//         }
+//         if(vec[mid]==vec[st]){
+//             st++;
+//             continue;
+//         }
+//         //left half sorted
+//         if(vec[st]<=vec[mid]){
+//             if(vec[st]<=target&&vec[mid]>=target){
+//                 end=mid-1;
+//             }else{
+//                 st=mid+1;
+//             }
+//         //right half sorted
+//         }else{
+//             if(vec[mid]<=target&&vec[end]>=target){
+//                 st=mid+1;
+//             }else{
+//                 end=mid-1;
+//             }
+//         }
+//     }
+// return false;
+// }
+// int main(){
+//     vector<int> vec={1,3,1,1,1};
+//     int target=3;
+//     cout<<search(vec,target)<<endl;
+// return 0;
+// }
