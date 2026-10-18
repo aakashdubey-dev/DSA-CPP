@@ -1615,3 +1615,42 @@
 //     cout<<search(vec,target)<<endl;
 // return 0;
 // }
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> check_grid(vector<vector<char>> nums){
+//         int n=nums.size();
+//         int m=nums[0].size();
+//         int st=0; int end=0;
+//         vector<int> ans;
+//         vector<vector<bool>> visited(n,vector<bool>(m,false));
+//         while(true){
+//             if(st<0||st>=n||end<0||end>=m){
+//                 return {-1,-1};
+//             }
+//             if(visited[st][end]){
+//                 return {st,end};
+//             }
+//             visited[st][end]=true;
+//             char ch =nums[st][end];
+//             if(ch=='D'){
+//                 st++; 
+//             }
+//             else if(ch=='U'){
+//                 st--; 
+//             }
+//             else if(ch=='L'){
+//                 end--; 
+//             }
+//             else if(ch=='R'){
+//                 end++; 
+//             }
+//         }
+//     }
+//     int main(){
+//         vector<vector<char>> nums={{'R','D','L'},{'U','L','U'}};
+//         vector<int> result=check_grid(nums);
+//         for(int val:result){
+//             cout<<val<<" ";
+//         }
+//     }
