@@ -1656,26 +1656,26 @@
 //     }
 
 //code for longest substring without repeating character
-#include<bits/stdc++.h>
-using namespace std;
-int long_substring(string s){
-    int n=s.length();
-    set<char> ch;
-    int st=0;  int max_len=INT8_MIN;
-    for(int i=0;i<n;i++){
-        while(ch.find(s[i])!=ch.end()){
-            ch.erase(s[st]);
-            st++;
-        }
-            ch.insert(s[i]);
-            int curr_len=ch.size();
-            max_len=max(max_len,curr_len);
-        }
-        st++;
-    return max_len;
-}
-int main(){
-    string s="edd";
-    cout<<long_substring(s)<<" ";
-return 0;
-}
+// #include<bits/stdc++.h>
+// using namespace std;
+// int long_substring(string s){
+//     int n=s.length();
+//     set<char> ch;
+//     int st=0;  int max_len=INT8_MIN;
+//     for(int i=0;i<n;i++){
+//         while(ch.find(s[i])!=ch.end()){
+//             ch.erase(s[st]);
+//             st++;
+//         }
+//             ch.insert(s[i]);
+//             int curr_len=ch.size();
+//             max_len=max(max_len,curr_len);
+//         }
+//         st++;
+//     return max_len;
+// }
+// int main(){
+//     string s="edd";
+//     cout<<long_substring(s)<<" ";
+// return 0;
+// }
