@@ -1679,3 +1679,35 @@
 //     cout<<long_substring(s)<<" ";
 // return 0;
 // }
+
+//code for reverse vowels from a string
+// #include<bits/stdc++.h>
+// using namespace std;
+//     string reverseVowels(string &s) {
+//         int st=0; int end=s.length()-1;
+//         while(st<end){
+//             char ch=tolower(s[st]);
+//             char chh=tolower(s[end]);
+//             if((ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')&&(chh=='a'||chh=='e'||chh=='i'||chh=='o'||chh=='u')){
+//                 swap(s[st],s[end]);
+//                 st++; end--;
+//             }else if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+//                     end--;
+//                 }
+//                 else if(chh=='a'||chh=='e'||chh=='i'||chh=='o'||chh=='u'){
+//                     st++;
+//                 }
+//             else {
+//                 st++; end--;
+//             }
+//         }
+//         return s;
+//     }
+// int main(){
+//     string s="a!e3i!o$u";
+//     string ans=reverseVowels(s);
+//     for(char val:s){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
