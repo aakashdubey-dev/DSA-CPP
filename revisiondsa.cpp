@@ -1711,3 +1711,47 @@
 //     }
 // return 0;
 // }
+
+//code for merge interval
+#include<bits/stdc++.h>
+using namespace std;
+vector<vector<int>> merge_intervals(vector<vector<int>> vec){
+    int idx=1;
+    int n=vec.size();
+    sort(vec.begin(),vec.end());
+    vector<vector<int>> ans;
+    vector<int> pre_interval=vec[0];
+    while(idx<n){
+        vector<int> curr_interval=vec[idx];
+        if(pre_interval[1]>=curr_interval[0]){
+            if(pre_interval[1]>curr_interval[1]){
+            int a=min(pre_interval[0],curr_interval[0]);
+            int b=max(pre_interval[1],curr_interval[1]);
+            pre_interval[0]=a;
+            pre_interval[1]=b;
+            }else{
+            int a=min(pre_interval[0],curr_interval[0]);
+            int b=max(pre_interval[1],curr_interval[1]);
+            pre_interval[0]=a;
+            pre_interval[1]=b;
+            }
+        }else{
+            ans.push_back(pre_interval);
+            pre_interval=curr_interval;
+        }
+        idx++;
+    }
+    ans.push_back(pre_interval);
+    return ans;
+}
+int main(){
+    vector<vector<int>> vec={{1,4},{2,3},{9,89},{90,91}};
+    vector<vector<int>> res=merge_intervals(vec);
+    for(vector<int> val:res){
+        for(int x:val){
+            cout<<x<<" ";
+        }
+        cout<<",";
+    }
+return 0;
+}
