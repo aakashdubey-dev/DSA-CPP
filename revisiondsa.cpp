@@ -1755,3 +1755,50 @@
 //     }
 // return 0;
 // }
+
+//code for summarys ranges
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<string> summarys_range(vector<int>& vec){
+//     int n=vec.size(); 
+//     vector<string> ans={};
+//         if(n==0){
+//         return ans;
+//     }
+//     int st=0; int count=0;
+//     int first=vec[st];
+//     string s; string t; string range;
+//     while(st<n-1){
+//         if((vec[st+1]-vec[st])==1){
+//             st++;  count++;
+//         }else{
+//             s=to_string(first);
+//             t="->"+to_string(vec[st]);
+//             if(count==0){
+//                 ans.push_back(s);
+//                 st++;
+//                 first=vec[st];
+//             }else{
+//             range=s+t;
+//             ans.push_back(range);
+//             st++;
+//             first=vec[st];
+//             count=0;
+//         }
+//     }
+//     }
+//     if(count == 0){
+//         ans.push_back(to_string(first));
+//     } else {
+//         ans.push_back(to_string(first) + "->" + to_string(vec[st]));
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<int> nums={0,2,3,4,6,8,9};
+//     vector<string> res=summarys_range(nums);
+//     for(string val:res){
+//         cout<<val<<endl;
+//     }
+// return 0;
+// }
