@@ -1802,3 +1802,31 @@
 //     }
 // return 0;
 // }
+
+//moves zeroes
+// #include<bits/stdc++.h>
+// using namespace std;
+//     void moveZeroes(vector<int>& vec) {
+//         int n=vec.size();
+//         int pos=0; int count=0;
+//         for(int i=0;i<n;i++){
+//             if(vec[i]==0){
+//                 count++;
+//             }else{
+//                 vec[pos]=vec[i];
+//                 pos++;
+//             }}
+//             int end_pos=n-1; int countt=0;
+//             while(countt<count){
+//                 vec[end_pos]=0;
+//                 end_pos--; countt++; 
+//             }
+//         for(int val:vec){
+//             cout<<val<<" ";
+//         }
+//     }
+// int main(){
+//     vector<int> vec={0,2,0,4,8};
+//     moveZeroes(vec);
+// return 0;
+// }
