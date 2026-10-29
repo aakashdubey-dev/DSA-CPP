@@ -1830,3 +1830,49 @@
 //     moveZeroes(vec);
 // return 0;
 // }
+
+//code for(Remove duplicates from sorted array)
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> remove_duplicates(vector<int>& vec){
+//     int idx=0; int n= vec.size();
+//     // if(n==0){return idx;}
+//     // if(n==1){return 1;} 
+//     int j=0;
+//     for(int i=1;i<n;i++){
+//         if(vec[i-1]==vec[i]){
+//             continue;
+//         }else{
+//             vec[idx]=vec[i-1];
+//             idx++;
+//         }
+//         j=i;
+//     }
+//     vec[idx++]=vec[j];
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={1,1,1,1,1};
+//   //  cout<<remove_duplicates(vec);
+//     vector<int> ans=remove_duplicates(vec);
+//     for(int val: vec){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
+
+//other method
+// #include<bits/stdc++.h>
+// using namespace std;
+//     int removeDuplicates(vector<int>& vec) {
+//         int n=vec.size();
+//         unordered_set<int> s;
+//         for(int i=0;i<n;i++){
+//             s.insert(vec[i]);
+//         }
+//         return s.size();
+//     }
+// int main(){
+//     vector<int> vec={1,1,1,1,1,1,1,1};
+//     cout<<removeDuplicates(vec);
+// return 0;
