@@ -1854,10 +1854,10 @@
 // int main(){
 //     vector<int> vec={1,1,1,1,1};
 //   //  cout<<remove_duplicates(vec);
-//     vector<int> ans=remove_duplicates(vec);
-//     for(int val: vec){
-//         cout<<val<<" ";
-//     }
+    // vector<int> ans=remove_duplicates(vec);
+    // for(int val: vec){
+    //     cout<<val<<" ";
+    // }
 // return 0;
 // }
 
@@ -1876,3 +1876,30 @@
 //     vector<int> vec={1,1,1,1,1,1,1,1};
 //     cout<<removeDuplicates(vec);
 // return 0;
+
+//code for (remove dupulicates from sorted array 2)
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> remove_duplicates2(vector<int>& vec){
+//     int n=vec.size();
+//     int count =0; int idx=0;
+//     for(int i=1;i<n;i++){
+//         if(vec[i-1]==vec[i]&&count<2){
+//             count++;
+//             vec[idx++]=vec[i];
+//         }
+//         else{
+//             count=0;
+//             vec[idx++]=vec[i];
+//         }
+//     }
+//     return vec;
+// }
+// int main(){
+//     vector<int> vec={1,1,1,2,2,3};
+//     vector<int> ans=remove_duplicates2(vec);
+//     for(int val: ans){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
