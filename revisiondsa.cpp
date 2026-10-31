@@ -1903,3 +1903,32 @@
 //     }
 // return 0;
 // }
+
+//code for(Is sequence)
+// #include<bits/stdc++.h>
+// using namespace std;
+// bool is_sequence(string s,string t){
+//     int n=s.length();
+//     int m=t.length();
+//     int st=0;
+//     for(int i=0;i<n;i++){
+//         bool flag=false;
+//         for(int j=st;j<m;j++){
+//             if(s[i]==t[j]){
+//                 st=j+1;
+//                 flag=true;
+//                 break;
+//             }
+//         }
+//         if(flag==false){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// int main(){
+//     string s="acb";
+//     string t="adfgbdfc";
+//     cout<<is_sequence(s,t);
+// return 0;
+// }
