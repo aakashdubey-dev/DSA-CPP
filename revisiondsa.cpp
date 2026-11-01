@@ -1932,3 +1932,25 @@
 //     cout<<is_sequence(s,t);
 // return 0;
 // }
+
+//code for (richest customer question)
+// #include<bits/stdc++.h>
+// using namespace std;
+// int richest_customer(vector<vector<int>> acc){
+//     int n=acc.size(); int richest=INT8_MIN;
+//     for(int i=0;i<n;i++){
+//         vector<int> vec=acc[i];
+//         int m=vec.size();
+//         int count=0;
+//         for(int j=0;j<m;j++){
+//             count+=vec[j];
+//         }
+//         richest=max(richest,count);
+//     }
+//     return richest;
+// }
+// int main(){
+//     vector<vector<int>> acc={{1,2,7},{3,2,1}};
+//     cout<<richest_customer(acc);
+// return 0;
+// }
