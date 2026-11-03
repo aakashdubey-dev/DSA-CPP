@@ -1954,3 +1954,28 @@
 //     cout<<richest_customer(acc);
 // return 0;
 // }
+
+//code for running sum in array
+// #include<bits/stdc++.h>
+// using namespace std;
+// vector<int> running_sum(vector<int> vec){
+//     int n=vec.size(); int idx=0;
+//     vector<int> ans;
+//     while(idx<n){
+//         int prev=0;
+//         for(int i=0;i<=idx;i++){
+//             prev+=vec[i];
+//         }
+//         ans.push_back(prev);
+//         idx++;
+//     }
+//     return ans;
+// }
+// int main(){
+//     vector<int> vec={1,2,3,4};
+//     vector<int> res=running_sum(vec);
+//     for(int val:res){
+//         cout<<val<<" ";
+//     }
+// return 0;
+// }
