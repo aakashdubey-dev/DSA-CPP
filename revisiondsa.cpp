@@ -1979,3 +1979,21 @@
 //     }
 // return 0;
 // }
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int count_bits(int n){
+//     int count=0;
+//     while(n>0){
+//         if(n%2==1){
+//             count++;
+//         }
+//         n=n/2;
+//     }
+//     return count;
+// }
+// int main(){
+//     int n=11;
+//     cout<<count_bits(n);
+// return 0;
+// }
