@@ -1997,3 +1997,31 @@
 //     cout<<count_bits(n);
 // return 0;
 // }
+
+//code for ( Find the Distance Value Between Two Arrays)
+// #include<bits/stdc++.h>
+// using namespace std;
+// int find_distance(vector<int> vec1,vector<int> vec2){
+//     int d=6;
+//     int n=vec1.size();
+//     int m=vec2.size();
+//     int count=0;
+//     for(int i=0;i<n;i++){
+//         bool flag=true;
+//         for(int j=0;j<m;j++){
+//             int a=max(vec1[i],vec2[j]);
+//             int b=min(vec1[i],vec2[j]);
+//             if((a-b)<=d){
+//                 flag=false;
+//             }
+//         }
+//         if(flag){count++;}
+//     }
+//     return count;
+// }
+// int main(){
+//     vector<int> vec1={2,1,100,3};
+//     vector<int> vec2={-5,-2,10,-3,7};
+//     cout<<find_distance(vec1,vec2);
+// return 0;
+// }
