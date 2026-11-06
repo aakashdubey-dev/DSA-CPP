@@ -2025,3 +2025,37 @@
 //     cout<<find_distance(vec1,vec2);
 // return 0;
 // }
+
+//code for (minimal subarray sum is equal to target)withO(n^2)
+// #include<bits/stdc++.h>
+// using namespace std;
+// int min_sum(vector<int> &vec,int target){
+//     int n=vec.size(); int idx=1; bool flag=false;
+//     int minimal_sum=INT8_MAX; int count=0;
+//     for(int i=0;i<n;i++){
+//         count=count+vec[i];
+//         if(count>=target){
+//             flag=true;
+//             minimal_sum=min(minimal_sum,idx);}
+//         for(int j=i+1;j<n;j++){
+//             count=count+vec[j]; idx++;
+//             if(count>=target){
+//                 flag=true;
+//                 minimal_sum=min(minimal_sum,idx);
+//             }
+//         }
+//         count=0;
+//         idx=1;
+//     }
+//     if(flag){
+//         return minimal_sum;
+//     }else{
+//         return -1;
+//     }
+// }
+// int main(){
+//     vector<int> vec={1,4,4};
+//     int target=4;
+//     cout<<min_sum(vec,target);
+// return 0;
+// }
