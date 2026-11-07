@@ -2060,7 +2060,7 @@
 // return 0;
 // }
 
-//brute force approach
+//optimized approach
 // #include<bits/stdc++.h>
 // using namespace std;
 // int min_len(vector<int> vec,int target){
