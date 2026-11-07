@@ -2059,3 +2059,31 @@
 //     cout<<min_sum(vec,target);
 // return 0;
 // }
+
+//brute force approach
+// #include<bits/stdc++.h>
+// using namespace std;
+// int min_len(vector<int> vec,int target){
+//     int n=vec.size(); int count=0;
+//     int min_count=INT_MAX;
+//     int j=0;
+//     for(int i=0;i<n;i++){
+//         count+=vec[i];
+//         while(count>=target){
+//             min_count=min(min_count,i-j+1);
+//             count-=vec[j];
+//             j++;
+//         }
+//     }
+//     if(min_count==INT_MAX){
+//         return 0;
+//     }
+//     return min_count;
+    
+// }
+// int main(){
+//     vector<int> vec={2,3,1,2,4,3};
+//     int target=70;
+//     cout<<min_len(vec,target);
+// return 0;
+// }
